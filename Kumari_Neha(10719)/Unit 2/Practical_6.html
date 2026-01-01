@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline, Internal, and External CSS Example</title>
+
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="Practical_6.css">
+
+    <!-- Internal CSS -->
+    <style>
+        /* Internal CSS */
+        h2 {
+            color: darkblue;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        p {
+            color: #333;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            background-color: lightyellow;
+            border-left: 5px solid gold;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Inline CSS -->
+    <h1 style="color: red; text-align: center;">Welcome to CSS Styling Example</h1>
+
+    <!-- Internal CSS Applied -->
+    <h2>This heading uses Internal CSS</h2>
+
+    <p>This is a normal paragraph styled using internal CSS. It controls font, color, and line spacing.</p>
+
+    <p class="highlight">This paragraph uses a class styled by internal CSS to highlight text.</p>
+
+    <!-- External CSS Applied -->
+    <div class="external-box">
+        <h3>This section is styled using External CSS</h3>
+        <p>External CSS helps to keep the design separate from HTML for cleaner code and easy maintenance.</p>
+    </div>
+</body>
+</html>

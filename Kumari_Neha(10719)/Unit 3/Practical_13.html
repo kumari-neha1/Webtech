@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Functions & Scope Demo</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        width: 420px;
+        padding: 25px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+        background: #007bff;
+        color: #fff;
+        transition: 0.2s;
+    }
+
+    button:hover {
+        background: #0056b3;
+    }
+
+    #output {
+        margin-top: 20px;
+        padding: 12px;
+        background: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        min-height: 60px;
+        font-size: 14px;
+        color: #333;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>JS Functions & Scope Demo</h2>
+
+    <input type="number" id="userNum" placeholder="Enter first number">
+    <input type="number" id="userNum2" placeholder="Enter second number">
+
+    <button onclick="showGreeting()">Show Greeting</button>
+    <button onclick="addNumbers()">Add User Numbers</button>
+    <button onclick="showScopeDemo()">Show var / let / const Scope</button>
+
+    <div id="output">Output will appear here...</div>
+</div>
+
+<script>
+/* -------------------------------
+   1️⃣ User-Defined Greeting Function
+---------------------------------*/
+function showGreeting() {
+    function greet(name) {
+        return `Hello, ${name}! Welcome to JavaScript.`;
+    }
+
+    document.getElementById("output").innerHTML = greet("User");
+}
+
+/* -------------------------------
+   2️⃣ Add User Numbers Function
+---------------------------------*/
+function addNumbers() {
+    let n1 = document.getElementById("userNum").value;
+    let n2 = document.getElementById("userNum2").value;
+
+    if (n1 === "" || n2 === "") {
+        document.getElementById("output").innerHTML = "Please enter both numbers.";
+        return;
+    }
+
+    function add(a, b) {
+        return a + b;
+    }
+
+    let sum = add(parseFloat(n1), parseFloat(n2));
+
+    document.getElementById("output").innerHTML = `Sum: ${sum}`;
+}
+
+/* -------------------------------
+   3️⃣ var / let / const Scope Demo
+---------------------------------*/
+function showScopeDemo() {
+    var a = 10;
+    let b = 20;
+    const c = 30;
+
+    let text = "<b>Scope Demonstration:</b><br><br>";
+
+    text += "<b>Before Block:</b><br>";
+    text += "var a = " + a + "<br>";
+    text += "let b = " + b + "<br>";
+    text += "const c = " + c + "<br><br>";
+
+    {
+        var a = 100;
+        let b_inside = 200;
+        const c_inside = 300;
+
+        text += "<b>Inside Block:</b><br>";
+        text += "var a = " + a + " (changed globally)<br>";
+        text += "let b = " + b_inside + " (block-only)<br>";
+        text += "const c = " + c_inside + " (block-only)<br><br>";
+    }
+
+    text += "<b>After Block Ends:</b><br>";
+    text += "var a = " + a + " (var changed globally)<br>";
+    text += "let b = 20 (let unchanged)<br>";
+    text += "const c = 30 (const unchanged)<br>";
+
+    document.getElementById("output").innerHTML = text;
+}
+</script>
+
+</body>
+</html>

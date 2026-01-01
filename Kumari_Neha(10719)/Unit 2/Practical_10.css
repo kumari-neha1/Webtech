@@ -1,0 +1,86 @@
+/* Universal Selector for Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header Section */
+.header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 5px solid #2e7d32;
+}
+
+.header .highlight {
+  color: yellow;
+  font-weight: bold;
+}
+
+/* Navigation Bar Layout */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+}
+
+.nav-item {
+  color: white;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background-color: #4CAF50;
+}
+
+/* Main Content Layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 2rem;
+}
+
+/* Content Section */
+.content {
+  flex: 1 1 60%;
+  background-color: #f0f8ff;
+  padding: 1.5rem;
+  border: 2px solid #2196F3;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Sidebar Section */
+.sidebar {
+  flex: 1 1 30%;
+  background-color: #fff3cd;
+  border: 2px solid #ffc107;
+  padding: 1rem;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+/* Span Styling */
+.keyword {
+  color: #e91e63;
+  font-weight: bold;
+}
+
+.bold {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  border-top: 5px solid #4CAF50;
+}

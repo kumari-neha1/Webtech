@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced DOM Manipulation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        #box {
+            width: 250px;
+            background: #eef6ff;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #aac7ff;
+            transition: 0.3s;
+        }
+
+        .highlight {
+            background: yellow;
+            font-weight: bold;
+        }
+
+        .item {
+            padding: 5px 0;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="title">Advanced DOM Manipulation</h1>
+
+    <p class="desc">This is a basic description.</p>
+
+    <div id="box">
+        <p class="item">Item 1</p>
+        <p class="item">Item 2</p>
+        <p class="item">Item 3</p>
+    </div>
+
+    <button id="addBtn">Add New Item</button>
+    <button id="toggleBtn">Toggle Highlight</button>
+    <button id="changeTextBtn">Change Title Text</button>
+
+    <script>
+        // 1. getElementById()
+        const title = document.getElementById("title");
+
+        // 2. querySelector()
+        const desc = document.querySelector(".desc");
+
+        // 3. querySelectorAll() - get multiple elements
+        const items = document.querySelectorAll(".item");
+
+        // Add event: Change title text
+        document.getElementById("changeTextBtn").addEventListener("click", () => {
+            title.textContent = "Title changed using getElementById() and textContent";
+            title.classList.toggle("red");
+        });
+
+        // Add event: Toggle highlight class
+        document.getElementById("toggleBtn").addEventListener("click", () => {
+            desc.classList.toggle("highlight");
+        });
+
+        // Add event: Add new item into the box
+        document.getElementById("addBtn").addEventListener("click", () => {
+            const box = document.getElementById("box");
+
+            // Create a new element
+            const newItem = document.createElement("p");
+            newItem.className = "item";
+            newItem.innerHTML = "<strong>New Item Added!</strong>";
+
+            // Append to the box
+            box.appendChild(newItem);
+        });
+
+        // Style all items using querySelectorAll()
+        items.forEach((el, index) => {
+            el.style.color = (index % 2 === 0) ? "blue" : "green";
+        });
+
+    </script>
+
+</body>
+</html>

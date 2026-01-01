@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation with JavaScript</title>
+</head>
+<body>
+
+<h2>HTML Form Validation using JavaScript Events</h2>
+
+<form id="myForm" onsubmit="return validateForm()">
+
+    <label>Name:</label><br>
+    <input type="text" id="name" oninput="clearError('nameError')">
+    <p id="nameError" style="color:red"></p>
+
+    <label>Email:</label><br>
+    <input type="text" id="email" oninput="clearError('emailError')">
+    <p id="emailError" style="color:red"></p>
+
+    <label>Password:</label><br>
+    <input type="password" id="password" oninput="clearError('passError')">
+    <p id="passError" style="color:red"></p>
+
+    <button type="submit">Submit</button>
+</form>
+
+
+<script>
+// -----------------------------
+// Clear error message on typing
+// -----------------------------
+function clearError(id) {
+    document.getElementById(id).innerText = "";
+}
+
+
+// -----------------------------
+// FORM VALIDATION (onsubmit)
+// -----------------------------
+function validateForm() {
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let valid = true;
+
+    // Name validation
+    if (name === "") {
+        document.getElementById("nameError").innerText = "Name cannot be empty!";
+        valid = false;
+    }
+
+    // Email validation
+    if (email === "" || !email.includes("@")) {
+        document.getElementById("emailError").innerText = "Enter a valid email!";
+        valid = false;
+    }
+
+    // Password validation
+    if (password.length < 6) {
+        document.getElementById("passError").innerText = "Password must be at least 6 characters!";
+        valid = false;
+    }
+
+    // If any field invalid → stop form submit
+    if (!valid) {
+        alert("Please fix errors before submitting!");
+        return false; // Stops form submit
+    }
+
+    // If all fields are correct
+    alert("Form Submitted Successfully!");
+    return true;  // Allow form submit
+}
+
+</script>
+
+</body>
+</html>

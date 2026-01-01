@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced JS Loops & Conditions</title>
+    <style>
+        body {
+            font-family: Poppins, Arial;
+            background: #f0f2f5;
+            padding: 30px;
+        }
+        .box {
+            width: 420px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            background: #007bff;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        input {
+            padding: 8px;
+            width: 100%;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e9ecef;
+            border-radius: 8px;
+            min-height: 60px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>JavaScript Conditions & Loops</h2>
+    
+    <label>Enter a Number:</label>
+    <input type="number" id="userNumber" placeholder="Example: 5">
+
+    <button onclick="showCondition()">Condition Result</button>
+    <button onclick="showForLoop()">For Loop</button>
+    <button onclick="showWhileLoop()">While Loop</button>
+    <button onclick="showDoWhileLoop()">Do-While Loop</button>
+
+    <div id="output">Output will appear here...</div>
+</div>
+
+<script>
+
+function getNumber() {
+    let num = document.getElementById("userNumber").value;
+    if (num === "") {
+        return null;
+    }
+    return parseInt(num);
+}
+
+function showCondition() {
+    let num = getNumber();
+    if (num === null) {
+        document.getElementById("output").innerHTML = "❌ Please enter a number first!";
+        return;
+    }
+
+    let result = "";
+
+    if (num > 20) {
+        result = "Number is greater than 20";
+    } else if (num > 10) {
+        result = "Number is greater than 10 but less than or equal to 20";
+    } else {
+        result = "Number is 10 or less";
+    }
+
+    document.getElementById("output").innerHTML = "📌 <b>Condition Result:</b><br>" + result;
+}
+
+function showForLoop() {
+    let num = getNumber();
+    if (num === null) {
+        document.getElementById("output").innerHTML = "❌ Please enter a number first!";
+        return;
+    }
+
+    let text = "🔁 <b>For Loop Output:</b><br>";
+    for (let i = 1; i <= num; i++) {
+        text += "Number: " + i + "<br>";
+    }
+
+    document.getElementById("output").innerHTML = text;
+}
+
+function showWhileLoop() {
+    let num = getNumber();
+    if (num === null) {
+        document.getElementById("output").innerHTML = "❌ Please enter a number first!";
+        return;
+    }
+
+    let i = 1;
+    let text = "🔄 <b>While Loop Output:</b><br>";
+
+    while (i <= num) {
+        text += "Count: " + i + "<br>";
+        i++;
+    }
+
+    document.getElementById("output").innerHTML = text;
+}
+
+function showDoWhileLoop() {
+    let num = getNumber();
+    if (num === null) {
+        document.getElementById("output").innerHTML = "❌ Please enter a number first!";
+        return;
+    }
+
+    let i = 1;
+    let text = "➡️ <b>Do-While Loop Output:</b><br>";
+
+    do {
+        text += "Value: " + i + "<br>";
+        i++;
+    } while (i <= num);
+
+    document.getElementById("output").innerHTML = text;
+}
+
+</script>
+
+</body>
+</html>

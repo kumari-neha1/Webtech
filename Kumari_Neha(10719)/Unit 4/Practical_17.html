@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Listeners Demo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            width: 300px;
+            height: 150px;
+            margin: 20px auto;
+            background-color: #2196f3;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .active {
+            background-color: #4caf50;
+            transform: scale(1.05);
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 10px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Mouse & Keyboard Events using Event Listeners</h2>
+
+    <!-- Mouse Event Box -->
+    <div id="box" class="box">
+        Hover or Click Me
+    </div>
+
+    <!-- Keyboard Event -->
+    <input type="text" id="textInput" placeholder="Type something...">
+
+    <br>
+
+    <!-- Buttons -->
+    <button id="addBtn">Add Events</button>
+    <button id="removeBtn">Remove Events</button>
+
+    <script>
+        var box = document.getElementById("box");
+        var input = document.getElementById("textInput");
+        var addBtn = document.getElementById("addBtn");
+        var removeBtn = document.getElementById("removeBtn");
+
+        // Mouse Events
+        function boxClick() {
+            box.classList.toggle("active");
+            box.innerText = "Box Clicked!";
+        }
+
+        function mouseOver() {
+            box.innerText = "Mouse Over!";
+        }
+
+        // Keyboard Event
+        function keyPress(event) {
+            console.log("Key Pressed:", event.key);
+        }
+
+        // Add Event Listeners
+        addBtn.addEventListener("click", function () {
+            box.addEventListener("click", boxClick);
+            box.addEventListener("mouseover", mouseOver);
+            input.addEventListener("keydown", keyPress);
+            alert("Events Added");
+        });
+
+        // Remove Event Listeners
+        removeBtn.addEventListener("click", function () {
+            box.removeEventListener("click", boxClick);
+            box.removeEventListener("mouseover", mouseOver);
+            input.removeEventListener("keydown", keyPress);
+            alert("Events Removed");
+        });
+    </script>
+
+</body>
+</html>

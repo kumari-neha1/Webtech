@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show / Hide & Toggle Class</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #2196f3;
+            color: white;
+            display: none;   /* initially hidden */
+            border-radius: 8px;
+        }
+
+        /* CSS class to toggle */
+        .highlight {
+            background-color: #4caf50;
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .btn-show {
+            background-color: #2196f3;
+            color: white;
+        }
+
+        .btn-toggle {
+            background-color: #ff5722;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Show / Hide & Toggle CSS Class</h2>
+
+    <!-- Buttons -->
+    <button class="btn-show" onclick="showHide()">Show / Hide Box</button>
+    <button class="btn-toggle" onclick="toggleClass()">Toggle Class</button>
+
+    <!-- Box -->
+    <div id="myBox" class="box">
+        This is a hidden box.<br>
+        JavaScript controls me 🙂
+    </div>
+
+    <script>
+        // Show or Hide element
+        function showHide() {
+            var box = document.getElementById("myBox");
+
+            if (box.style.display === "none" || box.style.display === "") {
+                box.style.display = "block";
+            } else {
+                box.style.display = "none";
+            }
+        }
+
+        // Toggle CSS class
+        function toggleClass() {
+            var box = document.getElementById("myBox");
+            box.classList.toggle("highlight");
+        }
+    </script>
+
+</body>
+</html>

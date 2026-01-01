@@ -1,0 +1,144 @@
+/* 
+   1️⃣ MOBILE FIRST DESIGN
+   (Default styles for small screens)
+ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f4f9f9;
+  color: #333;
+  padding: 1rem;
+}
+
+/* HEADER */
+header {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 1.2rem;
+  border-radius: 10px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* NAVIGATION */
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 0.5em;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* INTRO SECTION */
+.intro {
+  background-color: white;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* FEATURES SECTION */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.feature-box {
+  background-color: #fff3cd;
+  border: 2px solid #ffc107;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* 
+   2️⃣ TABLET SCREENS (min-width: 600px)
+ */
+@media (min-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav ul li {
+    margin: 0 1em;
+  }
+
+  .features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .feature-box {
+    flex: 1 1 45%;
+  }
+}
+
+/* 
+   3️⃣ DESKTOP SCREENS (min-width: 992px)
+*/
+@media (min-width: 992px) {
+  body {
+    padding: 2rem 5vw;
+  }
+
+  header {
+    text-align: left;
+    padding: 1.5rem 3rem;
+  }
+
+  nav ul {
+    float: right;
+  }
+
+  .intro {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .intro h2 {
+    font-size: 2rem;
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .feature-box {
+    padding: 2rem;
+  }
+}
