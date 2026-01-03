@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Canvas Drawing</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f5f2f2;
+      font-family: Arial, sans-serif;
+    }
+    canvas {
+      border: 2px solid #333;
+      background: rgb(17, 117, 119);
+    }
+  </style>
+</head>
+<body>
+  <canvas id="myCanvas" width="500" height="350"></canvas>
+
+  <script>
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // 1. Draw a blue rectangle
+    ctx.fillStyle = "#4A90E2";
+    ctx.fillRect(30, 30, 150, 80);
+
+    // 2. Draw a red circle
+    ctx.beginPath();
+    ctx.arc(300, 80, 40, 0, Math.PI * 2);
+    ctx.fillStyle = "#E74C3C";
+    ctx.fill();
+
+    // 3. Draw a green triangle
+    ctx.beginPath();
+    ctx.moveTo(120, 200);
+    ctx.lineTo(40, 300);
+    ctx.lineTo(200, 300);
+    ctx.closePath();
+    ctx.fillStyle = "#2ECC71";
+    ctx.fill();
+
+    // 4. Draw a line
+    ctx.beginPath();
+    ctx.moveTo(250, 200);
+    ctx.lineTo(420, 300);
+    ctx.strokeStyle = "#000";
+    ctx.lineWidth = 3;
+    ctx.stroke();
+
+    // 5. Add some text
+    ctx.font = "20px Arial";
+    ctx.fillStyle = "#333";
+    ctx.fillText("Simple Canvas Drawing", 140, 330);
+  </script>
+</body>
+</html>
