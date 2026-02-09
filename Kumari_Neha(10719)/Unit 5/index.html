@@ -1,69 +1,215 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>my portfolio</title>
-    </head>
-    <body>
-        <style>
-            #about{
-                font-size: 22px;
-                font-weight: bold;
-            }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumari Neha | Cybersecurity Professional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Kumari<span>Neha</span></a>
+                <div class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-            #project{
-                font-size: 22px;
-            }
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Aspiring Cybersecurity Professional</h1>
+                    <p>Currently pursuing B.Tech in Cybersecurity with a strong interest in safeguarding digital infrastructure through ethical practices and secure system design. Actively engaged in continuous learning and hands-on technical development.</p>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn">Contact Me</a>
+                        <a href="#skills" class="btn btn-outline">View Skills</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-illustration">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            #contact{
-                font-size: 22px;
-            }
-        </style>
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2>Technical & Professional Skills</h2>
+                <p>Foundational knowledge and abilities developed through academic studies and self-learning</p>
+            </div>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Cybersecurity Fundamentals</h3>
+                    <p>Basic knowledge of network security, ethical hacking, and cyber threat awareness.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Networking Basics</h3>
+                    <p>Understanding of networking fundamentals and secure communication protocols.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Cyber Safety Awareness</h3>
+                    <p>Knowledge of digital ethics, secure computing practices, and cyber safety principles.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-desktop"></i>
+                    <h3>Operating System Basics</h3>
+                    <p>Familiarity with OS fundamentals, system security, and secure configuration.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Problem-Solving</h3>
+                    <p>Developing analytical thinking and troubleshooting skills through practical exercises.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Communication & Teamwork</h3>
+                    <p>Effective communication skills and ability to collaborate in team environments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <header>
-            <h1>MY PERSONAL PORTFOLIO</h1>
-        </header>
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2>Academic Experience</h2>
+                <p>Learning journey and practical exposure in cybersecurity domain</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2025 - PRESENT</span>
+                        <h3>B.Tech in Cybersecurity</h3>
+                        <p>Currently pursuing degree with an introductory understanding of core concepts. Learning basic fundamentals of cybersecurity, networking, and computer systems through classroom lectures and lab sessions.</p>
+                        <ul>
+                            <li>Gaining exposure to cybersecurity concepts and practical applications</li>
+                            <li>Developing basic knowledge of cyber safety, digital ethics, and secure computing practices</li>
+                            <li>Actively engaged in self-learning using online resources to understand cybersecurity basics</li>
+                            <li>Building problem-solving and analytical skills through academic assignments</li>
+                            <li>Eager to learn new tools and technologies related to cybersecurity</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="about">
-            <h2>ABOUT ME</h2>
-            <p>hello! my name is Neha. i am from Bihar.
-                i want to become a web developer and want 
-                to create beautiful and functional websites. 
-                i am learning web development and passionate
-                to learn new technologies.</p>
-        </section>
-
-        <section id="project">
-            <h2>PROJECTS</h2>
-            <ul>
-                <li><strong>cybersecurity awareness website:</strong>
-                a simple static webpage explaining basics cybersecurity
-            tips, online safety measures,and how to avoid common cyber threats.</li>
-
-            <li><strong>password strength checker:</strong>a beginner project that 
-            checks if a password is strong or weak based on length and
-        characters.</li>
-
-        <li><strong>password generator tool:</strong>
-        a small python or javaScript tool that creats random strong password.</li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>CONTACT</h2>
-            <form>
-                <label for ="name">name:</label><br>
-                <input type="text" id="name"name="name"><br><br>
-                <label for="email">email:</label><br>
-                <input type="email" id="email" name="email"><br><br>
-                <label for="message">message:</label><br>
-                
-                <textarea id="message"name="message"></textarea><br><br>
+    <!-- Education & Languages Section -->
+    <section id="education">
+        <div class="container">
+            <div class="section-header">
+                <h2>Education & Languages</h2>
+                <p>Academic background and language proficiency</p>
+            </div>
             
-                <button type="submit">send</button>
-            </form>
-        </section>
-        <footer>
-            <p>2025,my portfolio</p>
-        </footer>
-    </body>
+            <div class="info-cards">
+                <div class="info-card">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <div class="education-name">Bachelor of Technology (B.Tech)</div>
+                        <div class="education-title">CSE Cybersecurity, Rungta International Skills University</div>
+                        <p>Currently pursuing degree with focus on cybersecurity fundamentals and secure system design.</p>
+                    </div>
+                    <div class="education-item">
+                        <div class="education-name">12th Grade (Science Stream)</div>
+                        <div class="education-title">SSV College, BSEB Board</div>
+                        <p>Completed higher secondary education with focus on science and mathematics.</p>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <h3>Languages</h3>
+                    <ul class="languages-list">
+                        <li>
+                            <span class="language-name">English</span>
+                            <span class="language-level">Professional Proficiency</span>
+                        </li>
+                        <li>
+                            <span class="language-name">Hindi</span>
+                            <span class="language-level">Native Proficiency</span>
+                        </li>
+                    </ul>
+                    
+                    <!-- Additional Skills Section -->
+                    <h3 class="additional-skills-title">Additional Skills</h3>
+                    <div class="additional-skills">
+                        <div class="skill-tag">Time Management</div>
+                        <div class="skill-tag">Willingness to Learn</div>
+                        <div class="skill-tag">Team Collaboration</div>
+                        <div class="skill-tag">Technical Learning</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Seeking internship opportunities to gain practical exposure and contribute to real-world cybersecurity challenges</p>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="contact-text">
+                        <h3>Email</h3>
+                        <p>nehajhaklg@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="contact-text">
+                        <h3>Location</h3>
+                        <p>Bhagalpur, Bihar, India</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="copyright">© 2023 Neha. All rights reserved.</p>
+            <p>Aspiring Cybersecurity Professional</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
 </html>
