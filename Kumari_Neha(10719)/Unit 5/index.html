@@ -1,77 +1,69 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unit 5 Practical | Git & Deployment</title>
-  <style>
-    body {
-      font-family: cursive;
-      margin: 0;
-      background: #013647;
-      color: #090000f3;
-    }
-    header {
-      background: #01869e;
-      color: white;
-      padding: 26px;
-      text-align: center;
-    }
-    section {
-      max-width: 900px;
-      margin: 20px auto;
-      background: rgb(165, 38, 6);
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    h2 { color: #1a90b7; }
-    ul { line-height: 1.8; }
-    footer {
-      text-align: center;
-      padding: 10px;
-      background: #e5e7eb;
-      margin-top: 20px;
-    }
-    code {
-      background: #f1f5f9;
-      padding: 4px 6px;
-      border-radius: 4px;
-    }
-  </style>
-</head>
-<body><header>
-  <h1>Unit 5 Practical</h1>
-  <p>Initialize Git Repository & Deploy Website</p>
-</header><section>
-  <h2>Aim</h2>
-  <p>To initialize a Git repository, commit changes, push the project to GitHub, and deploy a personal portfolio website using GitHub Pages or Netlify.</p>
-</section><section>
-  <h2>Tools Used</h2>
-  <ul>
-    <li>HTML & CSS</li>
-    <li>Git</li>
-    <li>GitHub</li>
-    <li>Netlify / GitHub Pages</li>
-  </ul>
-</section><section>
-  <h2>Steps Performed</h2>
-  <ol>
-    <li>Created a simple HTML portfolio website.</li>
-    <li>Initialized Git repository using <code>git init</code>.</li>
-    <li>Added files using <code>git add .</code>.</li>
-    <li>Committed changes using <code>git commit -m "Initial commit"</code>.</li>
-    <li>Pushed the repository to GitHub.</li>
-    <li>Deployed the website using GitHub Pages / Netlify.</li>
-  </ol>
-</section><section>
-  <h2>About Me</h2>
-  <p><strong>Name:</strong> Neha Jha</p>
-  <p><strong>Course:</strong> Engineering</p>
-  <p><strong>Project:</strong> Personal Portfolio Website</p>
-</section><section>
-  <h2>Result</h2>
-  <p>The personal portfolio website was successfully uploaded to GitHub and deployed online. The website is accessible through a live deployment link.</p>
-</section><footer>
-  <p>© 2026 Neha Jha | Unit 5 Practical</p>
-</footer></body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>my portfolio</title>
+    </head>
+    <body>
+        <style>
+            #about{
+                font-size: 22px;
+                font-weight: bold;
+            }
+
+            #project{
+                font-size: 22px;
+            }
+
+            #contact{
+                font-size: 22px;
+            }
+        </style>
+
+        <header>
+            <h1>MY PERSONAL PORTFOLIO</h1>
+        </header>
+
+        <section id="about">
+            <h2>ABOUT ME</h2>
+            <p>hello! my name is Neha. i am from Bihar.
+                i want to become a web developer and want 
+                to create beautiful and functional websites. 
+                i am learning web development and passionate
+                to learn new technologies.</p>
+        </section>
+
+        <section id="project">
+            <h2>PROJECTS</h2>
+            <ul>
+                <li><strong>cybersecurity awareness website:</strong>
+                a simple static webpage explaining basics cybersecurity
+            tips, online safety measures,and how to avoid common cyber threats.</li>
+
+            <li><strong>password strength checker:</strong>a beginner project that 
+            checks if a password is strong or weak based on length and
+        characters.</li>
+
+        <li><strong>password generator tool:</strong>
+        a small python or javaScript tool that creats random strong password.</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>CONTACT</h2>
+            <form>
+                <label for ="name">name:</label><br>
+                <input type="text" id="name"name="name"><br><br>
+                <label for="email">email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="message">message:</label><br>
+                
+                <textarea id="message"name="message"></textarea><br><br>
+            
+                <button type="submit">send</button>
+            </form>
+        </section>
+        <footer>
+            <p>2025,my portfolio</p>
+        </footer>
+    </body>
 </html>
